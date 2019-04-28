@@ -2,6 +2,8 @@ package UI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Bean.*;
+
 
 public class start {
     private JPanel Panel_Root;
@@ -17,9 +19,8 @@ public class start {
     {
         JFrame register = new JFrame("register");
         register.setContentPane(new register().Panel_Root);
-        register.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        register.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         register.pack();
-        //register.setBounds(300,200,400,100);
         register.setVisible(true);
         return register;
     }
@@ -30,9 +31,9 @@ public class start {
     {
         JFrame chatroom = new JFrame("chatroom");
         chatroom.setContentPane(new chatroom().panel1);
-        chatroom.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        chatroom.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         chatroom.pack();
-        //chatroom.setBounds(300,200,500,200);
+
         chatroom.setVisible(true);
         return chatroom;
     }
@@ -62,6 +63,10 @@ public class start {
                 //认证AS证书
 
                 //传输注册信息
+                //RSA加密传输2号报文
+                //等待AS返回3号报文
+
+
 
                 //注册结束，返回登陆界面
             }
@@ -71,10 +76,9 @@ public class start {
     public static void main(String[] args) {
         JFrame start = new JFrame("start");
         start.setContentPane(new start().Panel_Root);
-        start.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        start.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         start.pack();
         start.setVisible(true);
     }
-
 
 }
