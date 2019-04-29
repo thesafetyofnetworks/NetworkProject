@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  */
 public class Server {
-
+ //
     private int duankou = 9000;//端口号
     private ServerSocket server;//声明服务器
     private static Socket socket;//声明客户端
